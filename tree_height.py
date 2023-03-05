@@ -14,7 +14,7 @@ def compute_height(n, parents):
             continue
         height = 0
         j = i
-        while j != -i:
+        while j != -1:
             if heights[j] > 0:
                 heght += heights[j]
                 break
