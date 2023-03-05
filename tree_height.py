@@ -39,7 +39,7 @@ if input_method == "F":
                 if n:
                     parents = contents[1].strip().split(" ")
                     
-                    escept:
+                    except:
                         print("ERROR")
                         elif input_method == "I":
                             n = input().strip()
