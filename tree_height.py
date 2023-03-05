@@ -16,15 +16,15 @@ def compute_height(n, parents):
         j = i
         while j != -1:
             if heights[j] > 0:
-                heght += heights[j]
+                height += heights[j]
                 break
             else:
                 height += 1
                 j = int(parents[j])
         heights[i] = height
         if height > max_height:
-            max_height = heght
-return max_height
+            max_height = height
+    return max_height
 
 def main():
    input_method = input().strip()
