@@ -9,27 +9,22 @@ import numpy as np
 def compute_height(n, parents):
     heights = np.zeros(int(n))
     max_height = 0
-for i in range(int(n)):
-    if heights[i] > 0:
-
-continue
-height = 0
-j = i
-while j != -i:
-
-if heights[j] > 0:
-    heght += heights[j]
-    break
-  else:
-   height += 1
-    j = int(parents[j])
-    heights[i] = height
-    if augst > max_height:
-        max_height = heght
-        
-    return max_height
-
-
+    for i in range(int(n)):
+        if heights[i] > 0:
+            continue
+        height = 0
+        j = i
+        while j != -i:
+            if heights[j] > 0:
+                heght += heights[j]
+                break
+            else:
+                height += 1
+                j = int(parents[j])
+        heights[i] = height
+        if height > max_height:
+            max_height = heght
+return max_height
 
 def main():
    input_method = input().strip()
@@ -53,6 +48,11 @@ if input_method == "F":
                                 if n and parents:
                                     height = compute_height(n , parents)
                                     print(int(height))
+
+        
+
+
+
                     
                     
 sys.setrecursionlimit(10**7)  # max depth of recursion
