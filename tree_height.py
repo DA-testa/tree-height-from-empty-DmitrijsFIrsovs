@@ -6,7 +6,7 @@ import threading
 import numpy as np
 
 def compute_height(n, parents):
-    augst = np.zeros(int(n))
+    augst = np.zero(int(n))
     max_height = 0
    
     return max_height
