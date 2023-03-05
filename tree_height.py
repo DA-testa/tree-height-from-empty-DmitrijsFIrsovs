@@ -27,21 +27,22 @@ def compute_height(n, parents):
     return max_height
 
 def main():
-   input_method = input().strip()
-n , parents = None , None
-if input_method == "F":
-    file_dir = input().strip()
-    if str(file_dir[-1]) != "a":
-        try:
-            with open(f"./test/{file_dir}") as f:
-                contents = f.readlines()
-                n = contents[0].strip()
-                if n:
-                    parents = contents[1].strip().split(" ")
+    input_method = input().strip()
+    n , parents = None , None
+    
+    if input_method == "F":
+        file_dir = input().strip()
+        if str(file_dir[-1]) != "a":
+            try:
+                with open(f"./test/{file_dir}") as f:
+                    contents = f.readlines()
+                    n = contents[0].strip()
+                    if n:
+                        parents = contents[1].strip().split(" ")
                     
-                    except:
-                        print("ERROR")
-                        elif input_method == "I":
+            except:
+                print("ERROR")
+    elif input_method == "I":
                             n = input().strip()
                             if n:
                                 parents = input().strip().split(" ")
