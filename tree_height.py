@@ -62,7 +62,7 @@ def main():
     elif input_method == "I":
         n, parents = input_from_keyboard()
         if n and parents:
-            height = compute_height(n, parents)
+            height =compute_height(n, parents)
             print(int(height))
 
 sys.setrecursionlimit(10 ** 7)  # max depth of recursion
